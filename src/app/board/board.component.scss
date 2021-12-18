@@ -1,0 +1,42 @@
+main {
+  display: grid;
+  grid-template-columns: 200px 200px 200px;
+  grid-gap: 0rem;
+}
+app-square {
+  border: 1px solid whitesmoke;
+  height: 200px;
+  width: 200px;
+}
+
+.appbuton {
+  background-color: #b61111;
+  border: none;
+  color: white;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.startbuton {
+  background-color: #241d81;
+  border: none;
+  color: white;
+  width: 200px;
+  height: 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 20px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+.gametitle {
+  font-size: 50px;
+  text-align: center;
+  color: #eeeeee;
+}

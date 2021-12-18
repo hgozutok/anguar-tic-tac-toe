@@ -1,0 +1,10 @@
+<h1 class="gametitle">Current Player: {{player}}</h1>
+
+
+<h2 *ngIf="winner">{{winner}} has won!</h2>
+<button class="appbuton" (click)="reset()">Reset</button>
+<button class="startbuton" (click)="newGame">New Game</button>
+<main>
+
+  <app-square *ngFor="let square of squares; let i = index" [value]="square" (click)="makeMove(i)"></app-square>
+</main>
