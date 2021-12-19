@@ -1,1 +1,3 @@
-<button>{{value}}</button>
+<button [ngStyle]="{'background-color':getBGColor(value) }">{{value}}</button>
+<!-- getBGColor
+<button [ngStyle]="{'background-color': value==='X' ? 'green' : 'red'}">{{value}}</button> -->

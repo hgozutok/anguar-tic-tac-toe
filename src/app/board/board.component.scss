@@ -1,12 +1,16 @@
 main {
   display: grid;
   grid-template-columns: 200px 200px 200px;
-  grid-gap: 0rem;
+  grid-gap: 15px;
+  padding: 0%;
+  margin: 0%;
 }
 app-square {
-  border: 1px solid whitesmoke;
+  border: 0px solid whitesmoke;
   height: 200px;
   width: 200px;
+  padding: 0%;
+  margin: 0%;
 }
 
 .appbuton {
@@ -39,4 +43,7 @@ app-square {
   font-size: 50px;
   text-align: center;
   color: #eeeeee;
+}
+.my-disable {
+  pointer-events: none;
 }

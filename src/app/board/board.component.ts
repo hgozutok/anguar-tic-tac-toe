@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
+
 @Component({
   selector: 'app-board',
   templateUrl: './board.component.html',
@@ -22,20 +23,23 @@ export class BoardComponent implements OnInit {
     this.squares = Array(9).fill(null);
     this.winner = "";
     this.xIsNext = true;
+    this.isPlay = true;
   }
   get player() {
     return this.xIsNext ? 'X' : 'O';
   }
   makeMove(idx: number) {
-    if (!this.squares[idx]) {
+    if (!this.winner && this.squares[idx] === null) {
       this.squares.splice(idx, 1, this.player);
       this.xIsNext = !this.xIsNext;
     }
-    if (this.isPlay)
-      this.winner = this.calculateWinner();
-    if (this.winner === "X" || this.winner === "O")
+    this.winner = this.calculateWinner();
+    if (this.winner || this.squares.every(s => s !== null)) {
       this.isPlay = false;
+    }
   }
+
+
 
 
   calculateWinner() {
